@@ -1,0 +1,8 @@
+# Data files
+*.csv
+
+# DBeaver
+.dbeaver/
+
+# macOS
+.DS_Store
