@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ecommerce # the name dbt will use to refer to this source
+
+    database: ecommerce # MySQL database
+    schema: ecommerce # database name
+
+    tables:
+      - name: raw_purchase_events # table name that my Python script loaded

@@ -1,0 +1,13 @@
+ecommerce_dbt:
+  target: dev
+
+  outputs:
+    dev:
+      type: mysql
+      server: mysql
+      port: 3306
+      database: ecommerce
+      schema: ecommerce
+      username: root
+      password: password
+      driver: MySQL ODBC 8.0 ANSI Driver

@@ -1,0 +1,135 @@
+[0m08:28:00.187998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaba0d550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabcf62d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaba0d510>]}
+
+
+============================== 08:28:00.194107 | 2f0fe26a-90f3-4369-b2a5-fcd6b0e84878 ==============================
+[0m08:28:00.194107 [info ] [MainThread]: Running with dbt=1.7.9
+[0m08:28:00.196173 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init ecommerce_dbtfff', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:28:00.199362 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/root/.dbt')}
+[0m08:28:00.202077 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m08:28:00.207472 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m08:28:00.334858 [info ] [MainThread]: 
+Your new dbt project "ecommerce_dbtfff" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:28:00.336545 [info ] [MainThread]: Setting up your profile.
+[0m08:28:03.298233 [error] [MainThread]: Encountered an error:
+
+[0m08:28:03.310205 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/click/termui.py", line 218, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/click/termui.py", line 201, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m08:28:03.320059 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 3.1396258, "process_user_time": 0.967743, "process_kernel_time": 0.196368, "process_mem_max_rss": "103096", "process_out_blocks": "1872", "command_success": false, "process_in_blocks": "0"}
+[0m08:28:03.327657 [debug] [MainThread]: Command `dbt init` failed at 08:28:03.327426 after 3.15 seconds
+[0m08:28:03.331755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaba168d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb0e90d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac6a7c90>]}
+[0m08:28:03.337246 [debug] [MainThread]: Flushing usage events
+[0m08:28:41.145524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb81d8d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb56794d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb57e5710>]}
+
+
+============================== 08:28:41.150078 | 71af738f-e358-467a-b402-47c3788cc277 ==============================
+[0m08:28:41.150078 [info ] [MainThread]: Running with dbt=1.7.9
+[0m08:28:41.151955 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init ecommerce_dbt', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:28:41.155221 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m08:28:41.288620 [info ] [MainThread]: 
+Your new dbt project "ecommerce_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:28:41.290495 [info ] [MainThread]: Setting up your profile.
+[0m08:28:53.818472 [info ] [MainThread]: Profile ecommerce_dbt written to /root/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m08:28:53.825917 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 12.684588, "process_user_time": 0.934187, "process_kernel_time": 0.14951, "process_mem_max_rss": "104608", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m08:28:53.829025 [debug] [MainThread]: Command `dbt init` succeeded at 08:28:53.828850 after 12.69 seconds
+[0m08:28:53.831233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5696c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5697bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5696d10>]}
+[0m08:28:53.833350 [debug] [MainThread]: Flushing usage events
+[0m08:33:45.115595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6d81d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa74973d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa72f3f10>]}
+
+
+============================== 08:33:45.120782 | 1c6a76de-7807-4351-8d5c-b58bcd1976ec ==============================
+[0m08:33:45.120782 [info ] [MainThread]: Running with dbt=1.7.9
+[0m08:33:45.122587 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:33:45.128901 [info ] [MainThread]: dbt version: 1.7.9
+[0m08:33:45.131130 [info ] [MainThread]: python version: 3.11.15
+[0m08:33:45.132639 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m08:33:45.134444 [info ] [MainThread]: os info: Linux-5.10.124-linuxkit-aarch64-with-glibc2.41
+[0m08:33:45.185631 [info ] [MainThread]: Using profiles dir at /root/.dbt
+[0m08:33:45.188479 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m08:33:45.190995 [info ] [MainThread]: Using dbt_project.yml file at /workspace/dbt_project.yml
+[0m08:33:45.194577 [info ] [MainThread]: adapter type: mysql
+[0m08:33:45.196422 [info ] [MainThread]: adapter version: 1.7.0
+[0m08:33:45.199395 [info ] [MainThread]: Configuration:
+[0m08:33:45.201177 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:33:45.202817 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m08:33:45.204152 [info ] [MainThread]: Required dependencies:
+[0m08:33:45.206021 [debug] [MainThread]: Executing "git --help"
+[0m08:33:45.209815 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m08:33:45.211694 [info ] [MainThread]: Connection:
+[0m08:33:45.213656 [info ] [MainThread]:   server: mysql
+[0m08:33:45.215412 [info ] [MainThread]:   unix_socket: None
+[0m08:33:45.216787 [info ] [MainThread]:   port: 3306
+[0m08:33:45.218230 [info ] [MainThread]:   database: None
+[0m08:33:45.219989 [info ] [MainThread]:   schema: ecommerce
+[0m08:33:45.221416 [info ] [MainThread]:   user: root
+[0m08:33:45.223475 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m08:33:45.225315 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m08:33:45.226859 [debug] [MainThread]: Using mysql connection "debug"
+[0m08:33:45.228380 [debug] [MainThread]: On debug: select 1 as id
+[0m08:33:45.229710 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:33:45.261954 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m08:33:45.264563 [debug] [MainThread]: On debug: Close
+[0m08:33:45.267018 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:33:45.268902 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m08:33:45.270903 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </workspace/dbt_project.yml> not found
+
+[0m08:33:45.272606 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH: "git"
+
+[0m08:33:45.275078 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.19496825, "process_user_time": 1.019325, "process_kernel_time": 0.16285, "process_mem_max_rss": "110148", "process_out_blocks": "1872", "command_success": false, "process_in_blocks": "0"}
+[0m08:33:45.277090 [debug] [MainThread]: Command `dbt debug` failed at 08:33:45.277017 after 0.20 seconds
+[0m08:33:45.278634 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:33:45.280152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6adfed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa616a8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6bc4910>]}
+[0m08:33:45.281822 [debug] [MainThread]: Flushing usage events

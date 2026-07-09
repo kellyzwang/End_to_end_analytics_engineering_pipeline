@@ -13,5 +13,23 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  dbt:
+    build:
+      context: ./dbt
+
+    container_name: dbt
+
+    working_dir: /workspace/ecommerce_dbt
+
+    volumes:
+      - ./:/workspace
+      - ./dbt/profiles:/root/.dbt
+
+    depends_on:
+      - mysql
+
+    tty: true
+    stdin_open: true
+
 volumes:
   mysql_data:
