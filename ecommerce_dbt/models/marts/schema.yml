@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: dim_user
+    description: One row per user, user_id is unique and not null.
+
+    columns:
+      - name: user_id
+        description: Unique user identifier.
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: Product dimension, one row per product (based on product key)
+
+    columns:
+      - name: product_key
+        description: Surrogate key for products.
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_event
+
+    columns:
+
+      - name: user_id
+        tests:
+          - not_null
+          - relationships: # The relationships test = every user_id in fact_event must exist in dim_user
+              to: ref('dim_user')
+              field: user_id
+
+      - name: product_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key

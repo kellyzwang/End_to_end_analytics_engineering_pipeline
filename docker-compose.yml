@@ -31,5 +31,31 @@ services:
     tty: true
     stdin_open: true
 
+  airflow:
+    build:
+      context: ./airflow
+
+    container_name: airflow
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./:/workspace
+
+    depends_on:
+      - mysql
+
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+
+    command: bash
+
+    tty: true
+    stdin_open: true
+
 volumes:
   mysql_data:

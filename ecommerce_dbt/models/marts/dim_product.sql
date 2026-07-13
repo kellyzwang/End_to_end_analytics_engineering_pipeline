@@ -5,9 +5,26 @@
 -- across events, the latest observed product attributes are retained.
 
 
-select distinct product_id, category_id, category_code
-from {{ ref('stg_purchase_events') }}
+SELECT DISTINCT
 
+    MD5(
+        CONCAT(
+            COALESCE(product_id, ''),
+            '|',
+            COALESCE(category_id, ''),
+            '|',
+            COALESCE(category_code, ''),
+            '|',
+            COALESCE(brand, '')
+        )
+    ) AS product_key,
+
+    product_id,
+    category_id,
+    category_code,
+    brand
+
+FROM {{ ref('stg_purchase_events') }}
 
 
 # product_id:price is 1:many -- very common in ecommerce because of sales, promotions, and price changes
